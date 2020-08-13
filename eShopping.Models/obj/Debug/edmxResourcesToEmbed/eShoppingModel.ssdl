@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eShoppingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="Name_AR" Type="nvarchar" MaxLength="150" />
+    <Property Name="Name_EN" Type="nvarchar" MaxLength="150" />
+    <Property Name="Description_AR" Type="nvarchar(max)" />
+    <Property Name="Description_EN" Type="nvarchar(max)" />
+    <Property Name="IsHighlighted" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactUs">
+    <Key>
+      <PropertyRef Name="ContactUsID" />
+    </Key>
+    <Property Name="ContactUsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AboutUs_AR" Type="nvarchar(max)" />
+    <Property Name="AboutUs_EN" Type="nvarchar(max)" />
+    <Property Name="Address_AR" Type="nvarchar" MaxLength="500" />
+    <Property Name="Address_EN" Type="nvarchar" MaxLength="500" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="200" />
+    <Property Name="FaxNumber" Type="nvarchar" MaxLength="200" />
+    <Property Name="eMailAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="FaceBookURL" Type="nvarchar(max)" />
+    <Property Name="GooglePlusURL" Type="nvarchar(max)" />
+    <Property Name="YoutubeURL" Type="nvarchar(max)" />
+    <Property Name="TwitterURL" Type="nvarchar(max)" />
+    <Property Name="LastModified" Type="datetime" />
+    <Property Name="FooterStatement_AR" Type="nvarchar(max)" />
+    <Property Name="FooterStatement_EN" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ContactUsMessages">
+    <Key>
+      <PropertyRef Name="ContactUsMessageID" />
+    </Key>
+    <Property Name="ContactUsMessageID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="eMailAddress" Type="nvarchar(max)" />
+    <Property Name="MobileNumber" Type="nvarchar(max)" />
+    <Property Name="MessageContent" Type="nvarchar(max)" />
+    <Property Name="IsRead" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FileStore">
+    <Key>
+      <PropertyRef Name="FileStoreID" />
+    </Key>
+    <Property Name="FileStoreID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileType" Type="int" Nullable="false" />
+    <Property Name="TypeID" Type="bigint" Nullable="false" />
+    <Property Name="IsMain" Type="bit" Nullable="false" />
+    <Property Name="FilePath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FileExtension" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Localizations">
+    <Key>
+      <PropertyRef Name="LocalizationID" />
+    </Key>
+    <Property Name="LocalizationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Page" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Lang" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductTypeID" Type="bigint" />
+    <Property Name="Name_AR" Type="nvarchar" MaxLength="500" />
+    <Property Name="Name_EN" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description_AR" Type="nvarchar(max)" />
+    <Property Name="Description_EN" Type="nvarchar(max)" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="IsHighlighted" Type="bit" Nullable="false" />
+    <Property Name="IsRecommended" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_ProductAttributeValues">
+    <Key>
+      <PropertyRef Name="ProductAttributeValueID" />
+    </Key>
+    <Property Name="ProductAttributeValueID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="bigint" />
+    <Property Name="AttributeID" Type="bigint" />
+    <Property Name="AttributeValue_AR" Type="nvarchar(max)" />
+    <Property Name="AttributeValue_EN" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Product_Requests">
+    <Key>
+      <PropertyRef Name="ProductRequestID" />
+    </Key>
+    <Property Name="ProductRequestID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="bigint" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="500" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="200" />
+    <Property Name="eMailAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="TotalPrice" Type="float" />
+    <Property Name="RequestNotes" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="IsDone" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductAttribute">
+    <Key>
+      <PropertyRef Name="AttributeID" />
+    </Key>
+    <Property Name="AttributeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttributeName" Type="nvarchar" MaxLength="200" />
+    <Property Name="AttributeTitle_AR" Type="nvarchar" MaxLength="200" />
+    <Property Name="AttributeTitle_EN" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ProductType">
+    <Key>
+      <PropertyRef Name="ProductTypeID" />
+    </Key>
+    <Property Name="ProductTypeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_AR" Type="nvarchar" MaxLength="500" />
+    <Property Name="Name_EN" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductType_ProductAttributes">
+    <Key>
+      <PropertyRef Name="ProductTypeAttributeValueID" />
+    </Key>
+    <Property Name="ProductTypeAttributeValueID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductTypeID" Type="bigint" />
+    <Property Name="AttributeID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Password" Type="nvarchar" MaxLength="200" />
+    <Property Name="eMailAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="AboutHim" Type="nvarchar(max)" />
+    <Property Name="GroupID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ShowInfoToUsers" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="LastLogin" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserGroup">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_Product_ProductAttributeValues_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="Product_ProductAttributeValues" Type="Self.Product_ProductAttributeValues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Product_ProductAttributeValues">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductAttributeValues_ProductAttribute">
+    <End Role="ProductAttribute" Type="Self.ProductAttribute" Multiplicity="0..1" />
+    <End Role="Product_ProductAttributeValues" Type="Self.Product_ProductAttributeValues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductAttribute">
+        <PropertyRef Name="AttributeID" />
+      </Principal>
+      <Dependent Role="Product_ProductAttributeValues">
+        <PropertyRef Name="AttributeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Requests_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="Product_Requests" Type="Self.Product_Requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Product_Requests">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Types_AttributesValues_Products_Types_AttributesValues">
+    <End Role="ProductType" Type="Self.ProductType" Multiplicity="0..1" />
+    <End Role="ProductType_ProductAttributes" Type="Self.ProductType_ProductAttributes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductType">
+        <PropertyRef Name="ProductTypeID" />
+      </Principal>
+      <Dependent Role="ProductType_ProductAttributes">
+        <PropertyRef Name="ProductTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Products_Types">
+    <End Role="ProductType" Type="Self.ProductType" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductType">
+        <PropertyRef Name="ProductTypeID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductType_ProductAttributes_ProductAttribute">
+    <End Role="ProductAttribute" Type="Self.ProductAttribute" Multiplicity="0..1" />
+    <End Role="ProductType_ProductAttributes" Type="Self.ProductType_ProductAttributes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductAttribute">
+        <PropertyRef Name="AttributeID" />
+      </Principal>
+      <Dependent Role="ProductType_ProductAttributes">
+        <PropertyRef Name="AttributeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users_Groups">
+    <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroup">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="eShoppingModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactUs" EntityType="Self.ContactUs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactUsMessages" EntityType="Self.ContactUsMessages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileStore" EntityType="Self.FileStore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Localizations" EntityType="Self.Localizations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_ProductAttributeValues" EntityType="Self.Product_ProductAttributeValues" Schema="dbo" Table="Product.ProductAttributeValues" store:Type="Tables" />
+    <EntitySet Name="Product_Requests" EntityType="Self.Product_Requests" Schema="dbo" Table="Product.Requests" store:Type="Tables" />
+    <EntitySet Name="ProductAttribute" EntityType="Self.ProductAttribute" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductType" EntityType="Self.ProductType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductType_ProductAttributes" EntityType="Self.ProductType_ProductAttributes" Schema="dbo" Table="ProductType.ProductAttributes" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Product_ProductAttributeValues_Product" Association="Self.FK_Product_ProductAttributeValues_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Product_ProductAttributeValues" EntitySet="Product_ProductAttributeValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductAttributeValues_ProductAttribute" Association="Self.FK_Product_ProductAttributeValues_ProductAttribute">
+      <End Role="ProductAttribute" EntitySet="ProductAttribute" />
+      <End Role="Product_ProductAttributeValues" EntitySet="Product_ProductAttributeValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Requests_Product" Association="Self.FK_Product_Requests_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Product_Requests" EntitySet="Product_Requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Category" Association="Self.FK_Product_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Types_AttributesValues_Products_Types_AttributesValues" Association="Self.FK_Products_Types_AttributesValues_Products_Types_AttributesValues">
+      <End Role="ProductType" EntitySet="ProductType" />
+      <End Role="ProductType_ProductAttributes" EntitySet="ProductType_ProductAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Products_Types" Association="Self.FK_Products_Products_Types">
+      <End Role="ProductType" EntitySet="ProductType" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductType_ProductAttributes_ProductAttribute" Association="Self.FK_ProductType_ProductAttributes_ProductAttribute">
+      <End Role="ProductAttribute" EntitySet="ProductAttribute" />
+      <End Role="ProductType_ProductAttributes" EntitySet="ProductType_ProductAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users_Groups" Association="Self.FK_Users_Users_Groups">
+      <End Role="UserGroup" EntitySet="UserGroup" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

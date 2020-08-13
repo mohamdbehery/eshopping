@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eShoppingModelStoreContainer" CdmEntityContainer="eShoppingEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="eShoppingModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name_AR" ColumnName="Name_AR" />
+          <ScalarProperty Name="Name_EN" ColumnName="Name_EN" />
+          <ScalarProperty Name="Description_AR" ColumnName="Description_AR" />
+          <ScalarProperty Name="Description_EN" ColumnName="Description_EN" />
+          <ScalarProperty Name="IsHighlighted" ColumnName="IsHighlighted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactUs">
+      <EntityTypeMapping TypeName="eShoppingModel.ContactU">
+        <MappingFragment StoreEntitySet="ContactUs">
+          <ScalarProperty Name="ContactUsID" ColumnName="ContactUsID" />
+          <ScalarProperty Name="AboutUs_AR" ColumnName="AboutUs_AR" />
+          <ScalarProperty Name="AboutUs_EN" ColumnName="AboutUs_EN" />
+          <ScalarProperty Name="Address_AR" ColumnName="Address_AR" />
+          <ScalarProperty Name="Address_EN" ColumnName="Address_EN" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="eMailAddress" ColumnName="eMailAddress" />
+          <ScalarProperty Name="FaceBookURL" ColumnName="FaceBookURL" />
+          <ScalarProperty Name="GooglePlusURL" ColumnName="GooglePlusURL" />
+          <ScalarProperty Name="YoutubeURL" ColumnName="YoutubeURL" />
+          <ScalarProperty Name="TwitterURL" ColumnName="TwitterURL" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="FooterStatement_AR" ColumnName="FooterStatement_AR" />
+          <ScalarProperty Name="FooterStatement_EN" ColumnName="FooterStatement_EN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactUsMessages">
+      <EntityTypeMapping TypeName="eShoppingModel.ContactUsMessage">
+        <MappingFragment StoreEntitySet="ContactUsMessages">
+          <ScalarProperty Name="ContactUsMessageID" ColumnName="ContactUsMessageID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="eMailAddress" ColumnName="eMailAddress" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileStores">
+      <EntityTypeMapping TypeName="eShoppingModel.FileStore">
+        <MappingFragment StoreEntitySet="FileStore">
+          <ScalarProperty Name="FileStoreID" ColumnName="FileStoreID" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="IsMain" ColumnName="IsMain" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localizations">
+      <EntityTypeMapping TypeName="eShoppingModel.Localization">
+        <MappingFragment StoreEntitySet="Localizations">
+          <ScalarProperty Name="LocalizationID" ColumnName="LocalizationID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Page" ColumnName="Page" />
+          <ScalarProperty Name="Lang" ColumnName="Lang" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="eShoppingModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="Name_AR" ColumnName="Name_AR" />
+          <ScalarProperty Name="Name_EN" ColumnName="Name_EN" />
+          <ScalarProperty Name="Description_AR" ColumnName="Description_AR" />
+          <ScalarProperty Name="Description_EN" ColumnName="Description_EN" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IsHighlighted" ColumnName="IsHighlighted" />
+          <ScalarProperty Name="IsRecommended" ColumnName="IsRecommended" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_ProductAttributeValues">
+      <EntityTypeMapping TypeName="eShoppingModel.Product_ProductAttributeValues">
+        <MappingFragment StoreEntitySet="Product_ProductAttributeValues">
+          <ScalarProperty Name="ProductAttributeValueID" ColumnName="ProductAttributeValueID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="AttributeID" ColumnName="AttributeID" />
+          <ScalarProperty Name="AttributeValue_AR" ColumnName="AttributeValue_AR" />
+          <ScalarProperty Name="AttributeValue_EN" ColumnName="AttributeValue_EN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Requests">
+      <EntityTypeMapping TypeName="eShoppingModel.Product_Requests">
+        <MappingFragment StoreEntitySet="Product_Requests">
+          <ScalarProperty Name="ProductRequestID" ColumnName="ProductRequestID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="eMailAddress" ColumnName="eMailAddress" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="RequestNotes" ColumnName="RequestNotes" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductAttributes">
+      <EntityTypeMapping TypeName="eShoppingModel.ProductAttribute">
+        <MappingFragment StoreEntitySet="ProductAttribute">
+          <ScalarProperty Name="AttributeID" ColumnName="AttributeID" />
+          <ScalarProperty Name="AttributeName" ColumnName="AttributeName" />
+          <ScalarProperty Name="AttributeTitle_AR" ColumnName="AttributeTitle_AR" />
+          <ScalarProperty Name="AttributeTitle_EN" ColumnName="AttributeTitle_EN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductTypes">
+      <EntityTypeMapping TypeName="eShoppingModel.ProductType">
+        <MappingFragment StoreEntitySet="ProductType">
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="Name_AR" ColumnName="Name_AR" />
+          <ScalarProperty Name="Name_EN" ColumnName="Name_EN" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductType_ProductAttributes">
+      <EntityTypeMapping TypeName="eShoppingModel.ProductType_ProductAttributes">
+        <MappingFragment StoreEntitySet="ProductType_ProductAttributes">
+          <ScalarProperty Name="ProductTypeAttributeValueID" ColumnName="ProductTypeAttributeValueID" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="AttributeID" ColumnName="AttributeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="eShoppingModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="eMailAddress" ColumnName="eMailAddress" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="AboutHim" ColumnName="AboutHim" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ShowInfoToUsers" ColumnName="ShowInfoToUsers" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroups">
+      <EntityTypeMapping TypeName="eShoppingModel.UserGroup">
+        <MappingFragment StoreEntitySet="UserGroup">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

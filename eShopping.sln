@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShopping.Models", "eShopping.Models\eShopping.Models.csproj", "{8B63CF97-A220-4EF4-869B-31C85AB719EF}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "eShopping.Web", "eShopping.Web", "{A76DEB70-0ABE-4CE7-8955-92278D1B2C10}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54550"
+		Debug.AspNetCompiler.PhysicalPath = "eShopping.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54550\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54550"
+		Release.AspNetCompiler.PhysicalPath = "eShopping.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54550\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54550"
+		SlnRelativePath = "eShopping.Web\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShopping.Web.APIs", "eShopping.Web.APIs\eShopping.Web.APIs.csproj", "{3205E74C-4174-4F60-84E1-17DCBD53AAAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1B939BF0-3A05-4103-BFAE-C732E0246F2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0Docs", "0Docs", "{1363C7A5-D296-442B-9A98-4BE74DAAE942}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{9452E554-967E-4268-A8C0-A4DA9158060B}"
+	ProjectSection(SolutionItems) = preProject
+		0Docs\db\eShopping[26-06-2019].sql = 0Docs\db\eShopping[26-06-2019].sql
+		0Docs\db\eShopping[9-7-2019].sql = 0Docs\db\eShopping[9-7-2019].sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{FE54452D-88C6-4395-8B9B-B1A6B1C68EBF}"
+	ProjectSection(SolutionItems) = preProject
+		0Docs\Auth\Any.Auth.Request.png = 0Docs\Auth\Any.Auth.Request.png
+		0Docs\Auth\Login.Request.png = 0Docs\Auth\Login.Request.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B63CF97-A220-4EF4-869B-31C85AB719EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B63CF97-A220-4EF4-869B-31C85AB719EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B63CF97-A220-4EF4-869B-31C85AB719EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B63CF97-A220-4EF4-869B-31C85AB719EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A76DEB70-0ABE-4CE7-8955-92278D1B2C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76DEB70-0ABE-4CE7-8955-92278D1B2C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76DEB70-0ABE-4CE7-8955-92278D1B2C10}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76DEB70-0ABE-4CE7-8955-92278D1B2C10}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3205E74C-4174-4F60-84E1-17DCBD53AAAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3205E74C-4174-4F60-84E1-17DCBD53AAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3205E74C-4174-4F60-84E1-17DCBD53AAAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3205E74C-4174-4F60-84E1-17DCBD53AAAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1363C7A5-D296-442B-9A98-4BE74DAAE942} = {1B939BF0-3A05-4103-BFAE-C732E0246F2A}
+		{9452E554-967E-4268-A8C0-A4DA9158060B} = {1363C7A5-D296-442B-9A98-4BE74DAAE942}
+		{FE54452D-88C6-4395-8B9B-B1A6B1C68EBF} = {1363C7A5-D296-442B-9A98-4BE74DAAE942}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75AAD9E1-E878-413C-8971-82DF7945D59A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://elbehery.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = eShopping.Models\\eShopping.Models.csproj
+		SccProjectName1 = eShopping.Models
+		SccLocalPath1 = eShopping.Models
+		SccWebProject2 = true
+		SccProjectUniqueName2 = eShopping.Web
+		SccProjectName2 = eShopping.Web
+		SccLocalPath2 = eShopping.Web
+		SccProjectEnlistmentChoice2 = 2
+		SccProjectUniqueName3 = eShopping.Web.APIs\\eShopping.Web.APIs.csproj
+		SccProjectName3 = eShopping.Web.APIs
+		SccLocalPath3 = eShopping.Web.APIs
+	EndGlobalSection
+EndGlobal
